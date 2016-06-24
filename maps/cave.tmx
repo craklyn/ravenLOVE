@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="cave" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="cave.png" width="265" height="364"/>
+  <tile id="3">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="obstacle" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Ground" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztm8FuEzEQhi3R3MKlhVK10HIhcKG9lTMH8v6PhFesFe9kxp7Zlu7B3yeNukk3kTy/f4/teK9TSjc5LnNc5fhQXV/Or6+U9z7muH6jGImHHF9z3OX4nOO2ur6bX9fX5X9fctwn9Hhtvuf4kePPHEfjWsa3HIfUz6X03hpfjcTv1M57HY85dvP1z/l1K48P83fLiPpqJEp+PTH54X31ep9Ofb/u9zfze78a34MeOnV+e3GR2n3/Pp3qUXnP8hl66Gjtn2qKlsd9555D47OWruixRGv/U1rmb+rnclzSxrlH47MtXdFjiccf2rikjXO1P7TxKlo30ONcD61/P6d/fpE5r/2h6RGtG+ihj1cypF9a4xX+iKG1PzIHlnW6Vc/xRx+t/ZE5sKzTtT8Oymv0aNPKQ6uOHI3vqvMvxy/80aeVB60WHKu/2ryr1lCuR/BHH68/PNGr7/ijT9QfET3wR5z/qQf+iFO3W/5WIfdn5XxJqyvyfvwRo7RZ7sta6+tWTdHuxx8xIrW75Q/rfvwRI1Irev7Q7scfMV7qj9ZvvfgjjuUPa79wl/o6lLhI+CNKaXPJc0sP+ft5L6b9LLnngh5tSpvrPFt9v/6d0Ht250l8fs2Zn5EobbbmuFKP23S+Z9XKpfTHmrN0IzG1V54V8Y5HnhptzdsitX0kvHMrLeSZOO0csHUGK1LbR6LVh+t+LOv9FO/S6eyOtb63/IY/dHr+KP3YmlftHd+BP/xYa49y/Zz0M6HeOrG27oyshzYWaeuQ1rzI8oe154U/dFpjUaRfy3VGnXdND/yh4+njdY6tfm15zDoDhD90PDVA7ploOWvVe/zhx9PHa03K/NZ65tD7HAj+0PH0cdnfy1pDPmtY74X01vz4Q0drv9X3y7O21ppbzslYf8SRbW+ts717XJ57Is/kjERr3ro2PHpEnskZCdn2tXuLdc3Xfsfy5h49Yv44OO9bWyvQ4zQv1c7AWbntrR3xxzpK/f6UfOO+xx/aOQj08LF2X7b3jKH2GfTos0sxPco8tX5uk/rxekSfTSvzVE1HS5vo8/8j67E2R9FzWOjh4yV5eqsYia1zjR5Lts41eizZOtfosWTrXKPHkq1zjR5Lts41eizZOtfosWTrXKPHkq1zjR5Lts41egAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACc8xfPt3gb
+  </data>
+ </layer>
+ <layer name="Foreground" width="100" height="100" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt22lrFEEQgOH+GgNqDiVqNCt4gxfBJCAa//+vsovdYjpl9bkzuGHfB5rsMTtZprqmzw0BwIhP5vlBLK87z3EWy3EsJ7GczvGl9sCbBc+9iuV5LC9iOY/lZSyvFvx/++hhLIdhXfe13j9J3j/b/L2O5YP57NtY3i39Be85ub6PYnm8Ka33pFW4W+/T1+W121j+mM98juXL8DeFkHbjsON4mxMp4rG9ozC1yXJfelo5/lvm9d64wvcsTG1y2h7Lfc67t904r5EX87B9L2mPr8KULx+dz3j5QTyW8SuW32HKl1vnGPJjt2h+pONH4rGdXNugDgrvkR/L8a6tSPtcdjxo2w95TjzmYa+tzmmlfS47HrQxJB7zyY0lLL3eX53PEI/55O5X1o+w7gdfO5+R58RjHmldL823az/Ym7MiP8bZtYrW/CjN2ZMf49I22qvrI8iPMaV52W2QH2Na+1Ij5yUe/dK2QtpuWaPqXS/PnZd49EvzQ8bf0qZ787fC7nWonZd49EvzQ/qudv5Wr6fMbT0I0xqv9zhddyI/xsn9KVf3rzZ/e/fuSH7oeLF1jXHf6V6R3P1JSM5chv69OxIPHS/aNUb4VmF9rb5XjvuZPG7Zu+PNZ7Hnp+x9yI89pJ8lbcJoP8ubz6ItKfPq8IhVuDu+l8fsweon8WiZp7L9Krt3p3V8TzzKbH6M7uf1csybEyYedbn8SNcBR89hEY+62v6FFpoftbE78dhey/wI+bFbau29Ih67hXi0S38LYucJtb5fhPVYo0aOkXGIHfMTj37pOvqpee797knpXEhpzE882mndT8fZ56F9Xb20D8seg7pSvW7h7cPSOTB730NdbS6rtI4r4/rSPiz0m2NuceR36viXttWt47ocWXsvrWuhzVx74PR+hf+jZ68JcN+07N8pzUdhN9TiyFgDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADM4S+jIzat
+  </data>
+ </layer>
+ <objectgroup name="Object1" width="100" height="100" visible="0"/>
+ <layer name="Air" width="100" height="100" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt2z1PwzAQAFAPLBQEZWRETIgJwUb//+8iFomUGJpUJfijeU+yFLUZTkkT++7cEKjZe+kAmPic+e66G0+5AoFG3feD/3EXvq/vvh/eSXWL88a5z8PHmoFwtmHuPySf3ZQJZxPiM3Ps3fbQjZeMsTDvsRtvpYOAiskf17ML02uZrpOGNde+P9c8nddh+RQA+JX1Ulv0suoy18uCLXouHcBGDPn30vz9miEWaEl8bnZhWr9Kj9Wz/i720eUXbZFj1EWOUVZcZ6W9EOCnON+P11LWUO1RE+YSyD3aoWZYl1gzPGVftPk+H/t9yhj/FyStE/q9Qx5XpQPYsKEGNn7v3RaN6HKc2selHmokQI30b+sy7t+qc60jrTsdO17Kz+2NK2vpPqqxAAAAAAAAAAAAAAAAAAAAAAAAAABr+AJMzwqG
+  </data>
+ </layer>
+ <layer name="Affects" width="100" height="100" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAbnEAAAQ==
+  </data>
+ </layer>
+</map>

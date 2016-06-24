@@ -1,0 +1,4 @@
+skeleton:
+stand: F/B: 32H x 34W; R/L 32h x 42w
+attack R: 44H x 66W ; 08U x 09L
+attack L: 44H x 66W ; 08U x 15L

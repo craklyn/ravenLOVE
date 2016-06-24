@@ -1,0 +1,10 @@
+Required layers:
+
+
+Air - This layer is above the character.  It must exist so that if we have critters such as birds they will travel "above" the character and other ground landscape.
+
+Affect - this layer can be at any height.  Any tile which has a special property which affects the hero, such as push tiles, must be on this layer.  This layer may be a transparent block and the image be on another layer if you prefer...
+
+Object1 - This is the layer the character is drawn on.  (Actually, it is drawn immediately above this layer.  So anything on this layer will end up below the character).  This must be an object layer, not a tile layer.
+
+Ground - This is the "ground floor".  Any tiles which are obstacles mustAny layers above this layer are drawn over the character.  This layer and any layers below it are drawn below characters.

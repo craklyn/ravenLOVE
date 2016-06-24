@@ -1,0 +1,6 @@
+1. SVN
+  If SVN ever needs to be started again, one must do the following:
+
+  > svnserve -d --listen-port 6065 -r /phys/users/danielrb/svnRepo/
+
+
