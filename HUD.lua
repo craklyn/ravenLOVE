@@ -11,8 +11,10 @@ HUD.image = love.graphics.newImage("images/hud/HUD.png")
 
 -- Called from love.draw()
 function HUD.draw()
+    heartSize = 28
+
     tempHealth = Char.health
-	posX = 772
+	posX = 772 - heartSize * Char.maxHealth
 	drawImage = emptyHeart
 	
 	for i=1,Char.maxHealth do
@@ -26,7 +28,7 @@ function HUD.draw()
 
 	  love.graphics.drawq(HUD.image, drawImage, posX, 15)
       tempHealth = tempHealth - 1
-	  posX = posX - 28
+	  posX = posX + heartSize
 	end
 end
 
