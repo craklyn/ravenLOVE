@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="47" height="50" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="47" height="50" tilewidth="32" tileheight="32" nextobjectid="6">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="64" columns="8">
   <image source="tmw_desert_spacing.png" width="265" height="265"/>
   <tile id="0">
    <properties>
@@ -218,22 +218,22 @@
   </tile>
   <tile id="58">
    <properties>
-    <property name="pushX" value="5"/>
+    <property name="pushX" value="4"/>
    </properties>
   </tile>
   <tile id="59">
    <properties>
-    <property name="pushX" value="-7"/>
+    <property name="pushX" value="-4"/>
    </properties>
   </tile>
   <tile id="60">
    <properties>
-    <property name="pushY" value="-9"/>
+    <property name="pushY" value="-4"/>
    </properties>
   </tile>
   <tile id="61">
    <properties>
-    <property name="pushY" value="15"/>
+    <property name="pushY" value="4"/>
    </properties>
   </tile>
   <tile id="63">
@@ -247,18 +247,18 @@
    eJztmdlOwzAQRQ19gFCJAhWURQ2BspStlLJIvPH/X8VEiRVrNF7jLVIfjtxKtnR8PW4ct2SMlQE5BCbAkeP4D8RG+BzSe0W4X/d0L1kc9xC5h/bl1BmfATPg3JN7zDnsALvACM2p7zxsx14AlxZcAQVwAIw95uHifgPcWrDw4E5lrXNfKtzvgGfgPpG7C9x9YbgOvt3x76Ru7MPA3NfIGbu/smYvvvV0p36DVPtS5Y5rHH/X5Yz3gc69aFvVmmBH0Z3ak0uUO/+sc8froXM/Bk6AqYG7rH1E/bmrbe6h6l2VPwfPAfPEmpow5cWzO2avZZ91e0fFyLAfZx7QfcK6cx7PSMXYsB81zrf7jHXnPL53VEwN+1HjfLub1npsKtacN03cc5xDRbiL73yhXf/a1uX8LNYMZhMhu1XbmjwbxOcyPzPZ1EwoTNxr33XbNxf394G5433U153yz6lmxLOc6C7zj1Evpu54DWSuOeZO1Y+uTj4lpHanahz7x3B3OT/n4u6K7j07J/dK4U59z8ldlrtsDVK544ypO9bUZ4I+c0r5bPJVM7Jn01eGUO64flLnapM7zr5uvzNE5j6EvFXu/L01tVsu2NyX9UV17+1Cfef0G4FT5ve/N85PBIoA7rFqZh7A3eWe0hXX+80tW4bKP/1gJQU=
   </data>
  </layer>
- <objectgroup color="#1b2fa4" name="Object1" width="47" height="50">
-  <object name="THERE" x="348" y="48" width="87" height="49"/>
-  <object x="428" y="89" width="82" height="60"/>
+ <objectgroup color="#1b2fa4" name="Object1">
+  <object id="1" name="THERE" x="348" y="48" width="87" height="49"/>
+  <object id="2" x="428" y="89" width="82" height="60"/>
  </objectgroup>
  <layer name="Affects" width="47" height="50">
   <data encoding="base64" compression="zlib">
-   eJztzsEJwCAQAEG7EqJJ/2Xle98g0VNmYP9bCgAAAAAAAMA6T6iHduB9jRa6QzsYfa8T+uv9mhB59GR90ZJ1shf1LCRI
+   eJzt1EEKgCAURVF3FWS6/2XVJJIwyIlmnAN3/gafHwIAAAAAAADAOPloqzSDXHTuTkMXvXffnsJ822O4ds+0PRa1bl869CRWatm+dojvqP31kbWo3frI/mwHAEMkSg==
   </data>
  </layer>
- <objectgroup color="#2da425" name="Object2" width="47" height="50">
-  <object name="HI" x="93" y="38" width="113" height="122"/>
-  <object x="181" y="120"/>
-  <object x="181" y="120" width="135" height="89"/>
+ <objectgroup color="#2da425" name="Object2">
+  <object id="3" name="HI" x="93" y="38" width="113" height="122"/>
+  <object id="4" x="181" y="120"/>
+  <object id="5" x="181" y="120" width="135" height="89"/>
  </objectgroup>
 </map>
