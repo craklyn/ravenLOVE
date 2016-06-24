@@ -408,7 +408,7 @@ function loadMob(enemy, name, map, currentMap)
     end
   
   else
-    -- TODO: Set up some default condition in case a bad mob is created
+    -- TODO: Set up some default condition in case an undefined mob is created
   end
 end
 

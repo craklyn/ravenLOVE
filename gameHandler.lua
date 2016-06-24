@@ -76,10 +76,10 @@ function Char.moveTile(x,y,dt,blockSlide)
   end
   
   local tile1, tile2, tile3, tile4
-  local slimWidth = 1/32
+  local slimWidth = 4/32
   local tileX1 = roundNum(Char.tileX - 1.5 + slimWidth + x, 0)
   local tileX2 = roundNum(Char.tileX - 0.5 - slimWidth + x, 0)
-  local tileY1 = roundNum(Char.tileY - 1.5 + slimWidth + y, 0)
+  local tileY1 = roundNum(Char.tileY - 1.5 + 3*slimWidth + y, 0)
   local tileY2 = roundNum(Char.tileY - 0.5 - slimWidth + y, 0)
   --local tileX1, tileY1 = roundNum(Char.tileX+x + 4/32,0),                   roundNum(Char.tileY-(Char.height/32)/2+y + 4/32, 0)
   --local tileX2, tileY2 = roundNum(Char.tileX+(Char.width/32)/2+x - 4/32,0), roundNum(Char.tileY+(Char.height/32)/2+y - 4/32, 0)
@@ -185,7 +185,7 @@ function DesertExample.keypressed(k)
   if k == 'g' then
     if map[currentMap].filter == nil then
       map[currentMap].filter = love.graphics.newImage("images/layers/cave_sight.png")
-          map[currentMap].cameraScale = 1.6
+      map[currentMap].cameraScale = 1.6
 	else
       map[currentMap].filter = nil
       map[currentMap].cameraScale = 1.0
@@ -283,7 +283,9 @@ function DesertExample.update(dt)
   
   -- If map is nil, then we're in some special circumstance that we are handling differently :)  E.g. Title Screen
   if map[currentMap] ~= nil then 
-    local tile = map[currentMap].tl["Ground"].tileData(Char.tileX, Char.tileY)
+    local tileX = roundNum(Char.tileX - 0.5, 0)
+    local tileY = roundNum(Char.tileY - 0.5, 0)
+    local tile = map[currentMap].tl["Ground"].tileData(tileX, tileY)
     if tile ~= nil and tile.properties.speed then
       speedBonus = tile.properties.speed
     end
@@ -490,9 +492,9 @@ function DesertExample.draw()
 --    love.graphics.print("Use WASD to move me!", 330, 200)
 --  end
 	
---  if map[currentMap].filter ~= nil then
---    love.graphics.draw(map[currentMap].filter)
---  end
+  if map[currentMap].filter ~= nil then
+    love.graphics.draw(map[currentMap].filter)
+  end
 	  
   -- HUD display
   damageHandler.draw()
