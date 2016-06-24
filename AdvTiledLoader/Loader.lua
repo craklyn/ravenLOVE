@@ -15,7 +15,7 @@ local decompress = require(TILED_LOADER_PATH .. "external/deflatelua")
 -- Parser than turns an XML file into a table
 local xml_to_table = require(TILED_LOADER_PATH .. "external/xml")
 -- Base64 parser, Turns base64 strings into other data formats
-local base64 = require(TILED_LOADER_PATH .. "Base64")
+local base64 = require(TILED_LOADER_PATH .. "base64")
 
 -- Get the map classes
 local Map = require(TILED_LOADER_PATH .. "Map")
