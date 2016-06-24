@@ -65,9 +65,9 @@ function Char.moveTile(x,y,dt,blockSlide)
   elseif y > 0 then Char.facing = "down"
   elseif y < 0 then Char.facing = "up" end
 
-  if not blockSlide then
-    local tempTile = map[currentMap].tl["Affects"].tileData(Char.tileX, Char.tileY)
-    if tempTile ~= nil and tempTile.properties.pushX then 
+  if blockSlide then
+    local tempTile = map[currentMap].tl["Affects"].tileData(roundNum(Char.tileX - 1.0, 0), roundNum(Char.tileY - 1.0, 0))
+    if tempTile ~= nil and tempTile.properties.pushX then
       x = x + dt * tempTile.properties.pushX
     end
     if tempTile ~= nil and tempTile.properties.pushY then 
@@ -322,7 +322,7 @@ function DesertExample.update(dt)
 	  end
 	end
   
-    Char.moveTile(dx*dt*speed,dy*dt*speed, dt)
+    Char.moveTile(dx*dt*speed,dy*dt*speed, dt, true)
 
     if love.keyboard.isDown("e") then else DesertExample.centerCamera(dt) end
   
