@@ -66,7 +66,7 @@ function Char.moveTile(x,y,dt,blockSlide)
   elseif y < 0 then Char.facing = "up" end
 
   if blockSlide then
-    local tempTile = map[currentMap].tl["Affects"].tileData(roundNum(Char.tileX - 1.0, 0), roundNum(Char.tileY - 1.0, 0))
+    local tempTile = map[currentMap].tl["Affects"].tileData(roundNum(Char.tileX - 1.0, 0), roundNum(Char.tileY - 0.75, 0))
     if tempTile ~= nil and tempTile.properties.pushX then
       x = x + dt * tempTile.properties.pushX
     end
@@ -121,8 +121,8 @@ function Char.moveTile(x,y,dt,blockSlide)
      (tile3 == nil or tile3.properties.obstacle) or
      (tile4 == nil or tile4.properties.obstacle) then 
     if math.abs(y) > 0 and  math.abs(x) > 0 then 
-      if Char.moveTile(x,0,dt,true) == "fail" then
-        Char.moveTile(0,y,dt,true) 
+      if Char.moveTile(x,0,dt,false) == "fail" then
+        Char.moveTile(0,y,dt,false) 
       end
     end
     return "fail"
