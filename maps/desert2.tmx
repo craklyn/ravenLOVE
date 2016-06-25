@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="47" height="50" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="47" height="50" tilewidth="32" tileheight="32" nextobjectid="6">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="64" columns="8">
   <image source="grassland.png" width="265" height="265"/>
   <tile id="0">
    <properties>
@@ -239,21 +239,21 @@
  </tileset>
  <layer name="Ground" width="47" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt100KwjAQQOG5hhYKoi60usj9L9eIZKdhZtpkorzFt5GWvob81FlEZuBPJOPvI6F9/PZDdtxgCmw/ZZfs7nDNzh3aU6Xd+/wt91rb934+7XHtD6mv1+TUuv0m7zW7GDo0496jvYXR2i1zpFd7OdcmZZvm3OnVXs61xTD+1mtqa6bsFZ7vgafxvTXjqx3zl7JXeGnHvDamST63e/apVr611NZtdLNmXljnS2S/9p2iW7Vzx3pNdP+v/8fb4zsIAAAAAAAAfaxf2B5I
+   eJzt1sEKgzAMxvG8hhOEMXeYukPf/+VWGYUeZppEbTP5Dr/LYPRvbNWBiAaAiwjK3z1Bu//2Lrrt0Ddsv0djNBk8o0eF9sC0W9ff819t+9HrX709GNRqX4g/r9pn26/+M9pf9D2zs3KOHtrP4K1ds8drtaf3Wi/sk7x3arWn99osnL30HpX2UL7+QrbvgbfiuiXtmpmv0rPCSjJzbp55r2Tvt8A1cOe2dXdphltn2Uu7tN9ru7bHy3639Hhrz5tKXd66t67hiO84AAAAAAAAAIB/8QEGwx66
   </data>
  </layer>
- <objectgroup color="#1b2fa4" name="Object1" width="47" height="50">
-  <object name="THERE" x="348" y="48" width="87" height="49"/>
-  <object x="428" y="89" width="82" height="60"/>
+ <objectgroup color="#1b2fa4" name="Object1">
+  <object id="1" name="THERE" x="348" y="48" width="87" height="49"/>
+  <object id="2" x="428" y="89" width="82" height="60"/>
  </objectgroup>
  <layer name="Affects" width="47" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt2EEKhDAMRuHeyzr3P5aEIRBCO1NwkT/wPshGNw8JVRwDAN67F9MF7TW6dpsrTSe011FqX50dv84TpfbPn8nt8Z66/IwV23d70qF9jm9j3pfYrrTrkbc774/XlNtt8rs+7oZit/P+XaNyu9m1zzCq4rO/F9eV203c/a7fvZ3bgWr2npuHo+b0+03xTKC9Bu01aK9Be438T3A3iu0AAODMA5vrKF4=
+   eJzt2FEKwyAQRVH31cT9L6sMJGAfjhFa6hPugaEf/lyC2rSlAMD3zs7sgvY1du0OL5md0P47vfM3OpNu7XXi8+bUXh9Gn3u75k6fsWN7tsfd249rolH3S9vutNdvWXstn53O7TH6Xd+7Y5wcMlmjY3t4am/XHWn/maw50r3Tuzdd28OoW98PXI3eE4B/if2m90E2bmbPiuPveNrXoH0N2tegfQ39TzAbx3YAADDnDZCUMHo=
   </data>
  </layer>
- <objectgroup color="#2da425" name="Object2" width="47" height="50">
-  <object name="HI" x="93" y="38" width="113" height="122"/>
-  <object x="181" y="120"/>
-  <object x="181" y="120" width="135" height="89"/>
+ <objectgroup color="#2da425" name="Object2">
+  <object id="3" name="HI" x="93" y="38" width="113" height="122"/>
+  <object id="4" x="181" y="120"/>
+  <object id="5" x="181" y="120" width="135" height="89"/>
  </objectgroup>
 </map>
