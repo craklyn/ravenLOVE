@@ -155,7 +155,6 @@ function Char.draw()
   end
 					    
   love.graphics.setColor(150,50,50,200)
-  love.graphics.rectangle("line", Char.tileX*map[currentMap].tileWidth - 2, Char.tileY*map[currentMap].tileWidth - 2, 4, 4)
   love.graphics.setColor(255,255,255,255)
               
   if global.hitBoxes then
