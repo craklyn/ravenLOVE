@@ -218,22 +218,22 @@
   </tile>
   <tile id="58">
    <properties>
-    <property name="pushX" value="4"/>
+    <property name="pushX" value="2"/>
    </properties>
   </tile>
   <tile id="59">
    <properties>
-    <property name="pushX" value="-4"/>
+    <property name="pushX" value="-2"/>
    </properties>
   </tile>
   <tile id="60">
    <properties>
-    <property name="pushY" value="-4"/>
+    <property name="pushY" value="-2"/>
    </properties>
   </tile>
   <tile id="61">
    <properties>
-    <property name="pushY" value="4"/>
+    <property name="pushY" value="2"/>
    </properties>
   </tile>
  </tileset>
