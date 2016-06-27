@@ -221,6 +221,12 @@ function DesertExample.keypressed(k)
     Char.facing = "down"
 
     DesertExample.reset()
+
+    -- Load the initial mobs
+    if currentMap == "desert" then
+      mobHandler.addMob(map, currentMap, "greenBlob", 2, 2)
+    end
+
   elseif k == 'h' then
     global.hitBoxes = not global.hitBoxes
   elseif k == 'k' then
