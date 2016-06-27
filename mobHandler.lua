@@ -22,6 +22,8 @@ function mobHandler.addMob(map, currentMap, name, tileX, tileY)
   
   enemy.tileX = tileX
   enemy.tileY = tileY
+  enemy.speedX = 0
+  enemy.speedY = 0
   enemy.dead = false
   enemy.timeLastAttack = love.timer.getTime()
   enemy.soundStarted = false
