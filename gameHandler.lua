@@ -40,6 +40,8 @@ local currentSong = 1
 TEsound.playLooping(musicList[currentSong], "music")
 
 local currentMap = "TeamScreen"
+currentMob = 1
+mobList = {"greenBlob", "blueBlog", "critterSnake", "skeletonWarrior", "motherAnaconda"}
 
 local displayTime = 0 
 local displayMax = 2
@@ -232,7 +234,14 @@ function DesertExample.keypressed(k)
     currentSong = currentSong + 1
 	  if currentSong > #musicList then currentSong = 0 end
 	  if currentSong > 0 then TEsound.playLooping(musicList[currentSong], "music") end
+  elseif k == "return" then 
+	mobHandler.addMob(map, currentMap, mobList[currentMob], Char.tileX - 3, Char.tileY - 3)
+  elseif k == ' ' then
+    currentMob = currentMob + 1
+	if currentMob > table.getn(mobList)
+	  currentMob = 1
   end
+  
   
 end
 
@@ -325,13 +334,13 @@ function DesertExample.update(dt)
 
     if love.keyboard.isDown("e") then else DesertExample.centerCamera(dt) end
   
-    if love.keyboard.isDown("return") then 
-      if currentMap == "desert" then 
-        --mobHandler.addMob(map, currentMap, "greenBlob", Char.tileX - 3, Char.tileY - 3) 
-        mobHandler.addMob(map, currentMap, "critterSnake", Char.tileX - 3, Char.tileY - 3) 
-      elseif currentMap == "desert2" then mobHandler.addMob(map, currentMap, "motherAnaconda", Char.tileX - 3, Char.tileY - 3) 
-      elseif currentMap == "cave" then mobHandler.addMob(map, currentMap, "skeletonWarrior", Char.tileX - 3, Char.tileY - 3)  end
-    end
+--    if love.keyboard.isDown("return") then 
+--      if currentMap == "desert" then 
+--        --mobHandler.addMob(map, currentMap, "greenBlob", Char.tileX - 3, Char.tileY - 3) 
+--        mobHandler.addMob(map, currentMap, "critterSnake", Char.tileX - 3, Char.tileY - 3) 
+--      elseif currentMap == "desert2" then mobHandler.addMob(map, currentMap, "motherAnaconda", Char.tileX - 3, Char.tileY - 3) 
+--      elseif currentMap == "cave" then mobHandler.addMob(map, currentMap, "skeletonWarrior", Char.tileX - 3, Char.tileY - 3)  end
+--    end
 
     if love.mouse.isDown("r") and love.timer.getTime() > Char.timeLastShot + Char.shotCooldown then 
       TEsound.play(soundEffect["charArrowAttack"], "CharEffect")
