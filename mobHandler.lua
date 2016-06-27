@@ -100,7 +100,9 @@ function mobHandler.addMob(map, currentMap, name, tileX, tileY)
       enemy.timeLastAttack = love.timer.getTime()
     end
 	  if name == "blueBlob" and love.timer.getTime() > enemy.timeLastAttack + 10 then
-	  local tempTile = map[currentMap].tiles[map[currentMap].tl["Ground"].tileData[roundNum(enemy.tileY,0)][roundNum(enemy.tileX,0)]]
+          print(roundNum(enemy.tileX,0))
+          print(roundNum(enemy.tileY,0))
+	  local tempTile = map[currentMap].tl["Ground"].tileData(roundNum(enemy.tileX,0), roundNum(enemy.tileY,0))
 	  if tempTile ~= nil then
 	    mobHandler.addMob(map, currentMap, "blobPuddleBlue", enemy.tileX, enemy.tileY)
         enemy.timeLastAttack = love.timer.getTime()
@@ -316,8 +318,9 @@ function loadMob(enemy, name, map, currentMap)
     function enemy.personalUpdate(dt)
       local angle = math.atan2(enemy.speedY, enemy.speedX)
       angle = angle + 6*dt*(math.random() - 0.5)
-      --enemy.speedX = 0.6*math.cos(angle)
-      --enemy.speedY = 0.6*math.sin(angle)
+      local speed = math.random()
+      enemy.speedX = speed*math.cos(angle)
+      enemy.speedY = speed*math.sin(angle)
     end
     
     function enemy.hitsWall()
@@ -396,7 +399,7 @@ function loadMob(enemy, name, map, currentMap)
     enemy.touchDamage = 1.0
     enemy.damageType = "physical"
     
-	  function enemy.hitsWall()
+    function enemy.hitsWall()
       -- Character moves in a new direction...
       local temp = math.random() * 2 * math.pi
       enemy.speedX = 4.5*math.cos(temp)
@@ -404,9 +407,9 @@ function loadMob(enemy, name, map, currentMap)
     end 
     enemy.hitsWall() -- sets initial speedX and speedY
 
- 	function enemy.draw()
-	  local angle = math.atan2(enemy.speedY, enemy.speedX) - math.pi/2
-	  love.graphics.draw(imageAnacondaHead, enemy.x + enemy.width/2, enemy.y + enemy.width/2, angle, enemy.drawScale, enemy.drawScale, enemy.width/2, enemy.height/2)
+    function enemy.draw()
+      local angle = math.atan2(enemy.speedY, enemy.speedX) - math.pi/2
+      love.graphics.draw(imageAnacondaHead, enemy.x + enemy.width/2, enemy.y + enemy.width/2, angle, enemy.drawScale, enemy.drawScale, enemy.width/2, enemy.height/2)
     end
   
   else
