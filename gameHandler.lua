@@ -41,7 +41,7 @@ TEsound.playLooping(musicList[currentSong], "music")
 
 local currentMap = "TeamScreen"
 currentMob = 1
-mobList = {"greenBlob", "blueBlog", "critterSnake", "skeletonWarrior", "motherAnaconda"}
+mobList = {"greenBlob", "blueBlob", "critterSnake", "skeletonWarrior", "motherAnaconda"}
 
 local displayTime = 0 
 local displayMax = 2
@@ -238,8 +238,9 @@ function DesertExample.keypressed(k)
 	mobHandler.addMob(map, currentMap, mobList[currentMob], Char.tileX - 3, Char.tileY - 3)
   elseif k == ' ' then
     currentMob = currentMob + 1
-	if currentMob > table.getn(mobList)
-	  currentMob = 1
+    if currentMob > table.getn(mobList) then
+      currentMob = 1
+    end
   end
   
   
