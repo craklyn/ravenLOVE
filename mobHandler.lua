@@ -48,7 +48,7 @@ function mobHandler.addMob(map, currentMap, name, tileX, tileY)
     if enemy.anim then enemy.anim:update(dt) end
 	
     -- If the mob is on an intraversable space, kill it
-    local tempTile = map[currentMap].tl["Ground"].tileData(roundNum(enemy.tileX - 1, 0), roundNum(enemy.tileY - 1, 0))
+    local tempTile = map[currentMap].tl["Ground"].tileData(roundNum(enemy.tileX - 1.0, 0), roundNum(enemy.tileY - 1.0, 0))
     if tempTile == nil or tempTile.properties.obstacle then enemy.dead = true end
 	
     if enemy.isEnemy and Char.CheckAttackCollision(enemy) then
