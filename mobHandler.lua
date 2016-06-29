@@ -48,7 +48,7 @@ function mobHandler.addMob(map, currentMap, name, tileX, tileY)
     if enemy.anim then enemy.anim:update(dt) end
 	
     -- If the mob is on an intraversable space, kill it
-    local tempTile = map[currentMap].tl["Ground"].tileData(roundNum(enemy.tileX, 0), roundNum(enemy.tileY, 0))
+    local tempTile = map[currentMap].tl["Ground"].tileData(roundNum(enemy.tileX - 1, 0), roundNum(enemy.tileY - 1, 0))
     if tempTile == nil or tempTile.properties.obstacle then enemy.dead = true end
 	
     if enemy.isEnemy and Char.CheckAttackCollision(enemy) then
@@ -123,11 +123,26 @@ function mobHandler.addMob(map, currentMap, name, tileX, tileY)
   
     -- Grab the tile
     local tile = map[currentMap].tl["Ground"].tileData(roundNum(enemy.tileX + x, 0), roundNum(enemy.tileY + y, 0))
+
+    -- Grab the tile corners
+    local tile1, tile2, tile3, tile4
+    local slimWidth = 4/32
+    local tileX1 = roundNum(enemy.tileX - 1.5 + slimWidth + x, 0)
+    local tileX2 = roundNum(enemy.tileX - 0.5  - slimWidth + x, 0)
+    local tileY1 = roundNum(enemy.tileY - 1.5 + 3*slimWidth + y, 0)
+    local tileY2 = roundNum(enemy.tileY - 0.5 - slimWidth + y, 0)
+    tile1 = map[currentMap].tl["Ground"].tileData(roundNum(tileX1, 0), roundNum(tileY1, 0))
+    tile2 = map[currentMap].tl["Ground"].tileData(roundNum(tileX2, 0), roundNum(tileY1, 0))
+    tile3 = map[currentMap].tl["Ground"].tileData(roundNum(tileX1, 0), roundNum(tileY2, 0))
+    tile4 = map[currentMap].tl["Ground"].tileData(roundNum(tileX2, 0), roundNum(tileY2, 0))
   
     -- If the tile doesn't exist or is an obstacle then choose a new direction and exit the function
-    if tile == nil or tile.properties.obstacle then 
+    if (tile1 == nil or tile1.properties.obstacle) or
+       (tile2 == nil or tile2.properties.obstacle) or
+       (tile3 == nil or tile3.properties.obstacle) or
+       (tile4 == nil or tile4.properties.obstacle) then
       enemy.hitsWall()
-      return 
+      return
     end
   
     -- Otherwise change the enemy's tile
